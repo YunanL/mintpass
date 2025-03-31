@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine License NFT</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+    <script src="app.js" defer></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        input, select, button { margin: 10px; padding: 10px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h1>Machine License NFT</h1>
+
+    <button onclick="connectMetaMask()">Connect MetaMask</button>
+    <p id="wallet-address">Wallet: Not Connected</p>
+
+    <input type="text" id="machine-id" placeholder="Enter Machine ID">
+
+    <label for="function-select">Choose a Function:</label>
+    <select id="function-select">
+        <option value="Function 1">Function 1</option>
+        <option value="Function 2">Function 2</option>
+    </select>
+
+    <label for="duration-select">Choose Usage Duration:</label>
+    <select id="duration-select">
+        <option value="5">5 Days</option>
+        <option value="15">15 Days</option>
+        <option value="30">30 Days</option>
+    </select>
+
+    <button onclick="mintNFT()">Mint License NFT</button>
+
+    <p id="status"></p>
+</body>
+</html>
