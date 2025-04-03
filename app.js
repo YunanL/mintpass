@@ -642,6 +642,7 @@ async function mintNFT() {
     const nftContract = new web3.eth.Contract(nftAbi, nftContractAddress);
 
     try {
+        // ✅ Anyone can mint for themselves now, no restriction
         const tx = await nftContract.methods.mint(userAccount, metadataURI).send({ from: userAccount });
         document.getElementById("status").innerText = `✅ NFT Minted! TX: ${tx.transactionHash}`;
     } catch (error) {
@@ -649,3 +650,4 @@ async function mintNFT() {
         document.getElementById("status").innerText = `❌ Error Minting NFT`;
     }
 }
+
